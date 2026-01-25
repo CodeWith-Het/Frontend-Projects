@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Design Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="toolbar">
+        <div class="logo">
+            <i class="ri-menu-line"></i> <span>Nano Figma</span>
+        </div>
+        
+        <div class="tools-group">
+            <button class="tool-btn active" id="btn-select" title="Select Tool">
+                <i class="ri-cursor-fill"></i>
+            </button>
+            <div class="divider"></div>
+            <button class="tool-btn shape-btn" data-shape="rectangle" title="Rectangle"><i class="ri-rectangle-line"></i></button>
+            <button class="tool-btn shape-btn" data-shape="square" title="Square"><i class="ri-stop-line"></i></button>
+            <button class="tool-btn shape-btn" data-shape="circle" title="Circle"><i class="ri-circle-line"></i></button>
+            <button class="tool-btn shape-btn" data-shape="triangle" title="Triangle"><i class="ri-triangle-line"></i></button>
+            <button class="tool-btn shape-btn" data-shape="star" title="Star"><i class="ri-star-line"></i></button>
+            <button class="tool-btn shape-btn" data-shape="line" title="Line"><i class="ri-subtract-line"></i></button>
+        </div>
+
+        <div class="actions-group">
+            <button class="action-btn" id="clearBtn" title="Delete All"><i class="ri-delete-bin-line"></i></button>
+        </div>
+    </header>
+
+    <main class="workspace">
+        
+        <aside class="sidebar left">
+            <div class="sidebar-header">Layers</div>
+            <ul class="layers-list" id="layersList">
+                </ul>
+        </aside>
+
+        <section class="canvas-wrapper">
+            <div id="canvas">
+                </div>
+        </section>
+
+        <aside class="sidebar right">
+            <div class="sidebar-header">Properties</div>
+            
+            <div class="properties-group grid-2">
+                <div class="input-wrap"><label>X</label><input type="number" id="prop-x" value="0" placeholder="text"></div>
+                <div class="input-wrap"><label>Y</label><input type="number" id="prop-y" value="0" placeholder="text"></div>
+                <div class="input-wrap"><label>W</label><input type="number" id="prop-w" value="0" placeholder="text"></div>
+                <div class="input-wrap"><label>H</label><input type="number" id="prop-h" value="0" placeholder="text"></div>
+            </div>
+
+            <div class="properties-group">
+                <div class="group-title">Fill</div>
+                <div class="color-row">
+                    <input type="color" id="prop-color" value="#3b82f6" class="color-input" placeholder="text">
+                    <input type="text" id="prop-hex" value="#3B82F6" class="hex-input" placeholder="text">
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

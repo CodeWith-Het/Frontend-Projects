@@ -1,18 +1,18 @@
 import React from 'react'
 import Logo from "../../assets/Logo.png"
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
+     <div className="fixed top-0 left-0 w-full bg-gray-200 z-50 shadow">
     <div className='flex items-center justify-between w-full max-w-screen-xl mx-auto px-4 py-2'>
       
       <img src={Logo} alt="logo" className='h-24 w-auto' />
 
       <div className='flex mx-5 items-center gap-10'>
-        <Link to='/' className='font-semibold text-black cursor-pointer'>Home</Link>
-        <Link to='/shop' className='font-semibold text-black cursor-pointer'>Shop</Link>
-        <Link to='/collection' className='font-semibold text-black cursor-pointer'>Collection</Link>
-        <Link to='/products' className='font-semibold text-black cursor-pointer'>Products</Link>
+        <NavLink to='/' className='font-semibold text-black cursor-pointer'>Home</NavLink>
+        <NavLink to='/shop' className='font-semibold text-black cursor-pointer'>Shop</NavLink>
+        <NavLink to='/collection' className='font-semibold text-black cursor-pointer'>Collection</NavLink>
       </div>
 
       <div className='flex items-center gap-5'>
@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <i className="ri-todo-line cursor-pointer"></i>
       </div>
-
+    </div>
     </div>
   )
 }
